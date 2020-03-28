@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import Homepage from './components/Homepage';
+import Profile from './components/Profile';
 import './App.css';
 
+
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const [aboutMe, setAboutMe] = useState(false);
+  const clickHandler = () => {
+    // ! change it to something that is not this - boolean so switch btwn t or f
+    setAboutMe(!aboutMe)
+  }
+  
+  if (aboutMe) {
+    return <Profile clickHandler={clickHandler}/>;
+  }
+    return <Homepage clickHandler={clickHandler}/>;
+
 }
 
+
 export default App;
+
+
+

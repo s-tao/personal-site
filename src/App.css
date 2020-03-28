@@ -1,4 +1,39 @@
-.App {
+body {
+  height: 100vh;
+  /* width: 100vh; */
+  background-image: url(./clouds-bg.jpg);
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+}
+
+.homepage-info {
+  /* display: flex; */
+  /* justify-content: center; */
+  align-self: center;
+  /* temp fix for padding, need to center to page automatically*/
+  padding-top: 50px;
+}
+
+.profile {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: double 1.5px #ffffff;
+  padding: 3px;
+}
+
+/* 
+.container-center{
+  height: 100vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+} */
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +70,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
