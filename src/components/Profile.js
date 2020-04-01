@@ -4,17 +4,21 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithubSquare, faBuffer } from '@fortawesome/free-brands-svg-icons'
 import profilePic from '../prof-pic.jpg' 
-// import '../Profile.css';
+import '../Homepage.css';
 
 // import Fade from 'react-reveal/Fade';
 
 
 const Profile = ({clickHandler}) => {
+    const justifyText = {
+        textAlign: 'justify'
+    }
 
     return (
         <Container fluid className="homepage-info">             
           <Row className="center-flex"> 
-            <Col md={{span: 3, offset: 1}}>
+            {/* <Col md={{span: 3, offset: 1}}> */}
+            <Col md={3}>
               <Row>
                 <Col md={12} className="center-flex">
                   <img src={profilePic} alt="Profile" 
@@ -44,7 +48,7 @@ const Profile = ({clickHandler}) => {
                 </Col>
               </Row>
             </Col>
-            <Col md={7} className="center-flex">
+            <Col md={9} className="center-flex" style={justifyText}>
               <p>
                 I was a Landscape Designer at a firm in Marin for almost three 
                 years. During that time, I immediately gravitated towards the 
