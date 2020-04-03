@@ -5,13 +5,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithubSquare, faBuffer } from '@fortawesome/free-brands-svg-icons'
 import profilePic from '../prof-pic.jpg' 
 import '../Homepage.css';
+// import { useTransition, useSpring, useChain, config } from 'react-spring'
+
+// import styled from 'styled-components';
+// import { Center } from '../style.js';
 
 // import Fade from 'react-reveal/Fade';
-
 // import { BrowserRouter as Router, Link, Redirect } from 'react-router-dom';
 
 
-const Homepage = ({clickHandler}) => {
+// const Homepage = () => {
+const Homepage = () => {
+
+
     return (
         // <Fade>
           <Container fluid className="homepage-info">
@@ -22,7 +28,9 @@ const Homepage = ({clickHandler}) => {
                   <Col md="auto" className="center-flex">
                     <img src={profilePic} alt="Profile" 
                                           className="profile-img" 
-                                          onClick={clickHandler}/>
+                                          // onClick={clickHandler}
+
+                                          />
                   </Col>
                 </Row>
                 <Row>

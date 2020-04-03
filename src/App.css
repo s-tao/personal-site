@@ -2,6 +2,7 @@ body {
   height: 100vh;
   background-image: url(./clouds-bg.jpg);
   overflow: auto;
+  background-size: cover;
 }
 
 #root {

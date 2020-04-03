@@ -2,23 +2,33 @@
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  border: double 1.5px #ffffff;
-  }
+}
 
 .profile-img:hover {
   cursor: pointer;
 }
 
 .homepage-info {
+  /* background-size: cover; */
+  position: absolute;
   justify-content: center;
   align-items: center;
-  width: auto;
-  height: auto;
-  margin: auto;
-  padding: 25px;
+  max-width: 800px;
+  max-height: 500px;
+  margin: auto 8%;
+  /* padding: 25px; */
   display: flex;
   background-color: #ffffff;
-  opacity: 80%;
+  opacity: 95%;
+  outline: solid 1px #c1cfd3;
+  /* will-change: transform, opacity; */
+
+  /* outline-offset: 3px; */
+}
+
+
+.c {
+  will-change: transform, opacity;
 }
  
 .center-flex {
@@ -28,19 +38,3 @@
   text-align: center;
 }
 
-/* .homepage-info {
-  border: 2px solid #ffffff;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  width: 25%;
-  margin: auto;
-  height: 50%;
-  padding: 5px;
-  display: inline-block;
-  background-color: #ffffff;
-  opacity: 80%;
-} */
-    

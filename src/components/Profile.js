@@ -1,54 +1,25 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faGithubSquare, faBuffer } from '@fortawesome/free-brands-svg-icons'
-import profilePic from '../prof-pic.jpg' 
-import '../Homepage.css';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faLinkedin, faGithubSquare, faBuffer } from '@fortawesome/free-brands-svg-icons'
+// import profilePic from '../prof-pic.jpg' 
+// import '../Homepage.css';
 
 // import Fade from 'react-reveal/Fade';
 
-
-const Profile = ({clickHandler}) => {
+const Profile = () => {
+// const Profile = () => {
     const justifyText = {
         textAlign: 'justify'
     }
 
     return (
-        <Container fluid className="homepage-info">             
-          <Row className="center-flex"> 
-            {/* <Col md={{span: 3, offset: 1}}> */}
-            <Col md={3}>
-              <Row>
-                <Col md={12} className="center-flex">
-                  <img src={profilePic} alt="Profile" 
-                                        className="profile-img"
-                                        onClick={clickHandler}
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <Col md={12} className="center-flex">
-                  <h1>Sarah Tao</h1>
-                </Col>
-              </Row>
-              <Row className="center-flex">
-                <Col md="auto" sm={1} className="center-flex">
-                  <a href="https://www.linkedin.com/in/sarahtao/">
-                    <FontAwesomeIcon icon={faLinkedin} size="2x"/>
-                  </a>
-                </Col>
-                <Col md="auto" sm={1} className="center-flex">
-                  <a href="https://github.com/s-tao">
-                    <FontAwesomeIcon icon={faGithubSquare} size="2x"/>
-                  </a>  
-                </Col>
-                <Col md="auto" sm={1} className="center-flex">
-                  <FontAwesomeIcon icon={faBuffer} size="2x"/>
-                </Col>
-              </Row>
-            </Col>
-            <Col md={9} className="center-flex" style={justifyText}>
+        <Container fluid className="homepage-info">  
+          <Row className="center-flex" 
+              //  onClick={clickHandler}
+               > 
+            <Col md={7} className="center-flex" style={justifyText}>
               <p>
                 I was a Landscape Designer at a firm in Marin for almost three 
                 years. During that time, I immediately gravitated towards the 
