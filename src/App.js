@@ -4,7 +4,8 @@ import bkgrd from './clouds-bg.jpg'
 import { createGlobalStyle } from 'styled-components'
 import Homepage from './components/Homepage';
 import Profile from './components/Profile';
-
+import Nav from './components/Nav';
+import { Container } from './styled.js';
 import {useSpring, animated as a} from 'react-spring';
 import './App.css';
 
@@ -32,7 +33,7 @@ function App() {
 
   const {transform, opacity} = useSpring({
     opacity: aboutMe ? 1 : 0,
-    transform: `perspective(600px) rotateX(${aboutMe ? 180 : 0}deg)`,
+    transform: `perspective(1200px) rotateX(${aboutMe ? 180 : 0}deg)`,
     config: {mass: 5, tension: 500, friction: 80}
   })
 
@@ -40,14 +41,16 @@ function App() {
   return (
     <>
     <GlobalStyle/>
-      <div onClick={clickHandler}>
+      <Nav/>
+
+      <Container>
         <a.div className="flip" style={{ opacity: opacity.interpolate(o => 1 - o), transform }}>
           <Homepage/>
         </a.div>
-        <a.div className="flip" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }}>
-        <Profile/>
+        <a.div onClick={clickHandler} className="flip" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }}>
+          <Profile/>
         </a.div>
-      </div>
+      </Container>
     </>
   )
 

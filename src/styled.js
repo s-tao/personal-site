@@ -6,25 +6,24 @@ export const Container = styled.div`
   display: flex;
   margin: auto;
   height: 100vh;
+  width: 100%;
 `;
 
 export const FlipContainer = styled.div`
-  position: absolute;
+  ${'' /* position: absolute; */}
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 680px;
+  height: 300px;
   margin: auto 8%;
-  padding: 25px; 
+  padding: 3%; 
   display: grid;
   background-color: #ffffff;
   opacity: 95%;
-  outline: solid 1px #c1cfd3;
-  background-size: cover;
-  background-position: 50%;
-  background-position-x: 50%;
-  background-position-y: center;
-  ${'' /* border-radius: 10px; */}
+  ${'' /* outline: solid 1px #c1cfd3; */}
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 5px;
 `;
       
 export const Block = styled.div`
