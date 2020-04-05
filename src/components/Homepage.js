@@ -1,63 +1,51 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithubSquare, faBuffer } from '@fortawesome/free-brands-svg-icons'
 import profilePic from '../prof-pic.jpg' 
-import '../Homepage.css';
+import { Container, FlipContainer, Block } from '../styled.js'
 // import { useTransition, useSpring, useChain, config } from 'react-spring'
 
-// import styled from 'styled-components';
-// import { Center } from '../style.js';
 
-// import Fade from 'react-reveal/Fade';
 // import { BrowserRouter as Router, Link, Redirect } from 'react-router-dom';
 
 
-// const Homepage = () => {
+
 const Homepage = () => {
 
+  // inline style created as dict (keys: values)
+  const imgStyle = {
+    height: '150px',
+    width: '150px',
+    borderRadius: '50%',
+    justifyContent: 'center'
+  };
 
-    return (
-        // <Fade>
-          <Container fluid className="homepage-info">
-            
-            <Row>
-              <Col md={12}>
-                <Row className="justify-content-md-center">
-                  <Col md="auto" className="center-flex">
-                    <img src={profilePic} alt="Profile" 
-                                          className="profile-img" 
-                                          // onClick={clickHandler}
+  const iconStyle = {
+    margin: '0 8px',
+  };
 
-                                          />
-                  </Col>
-                </Row>
-                <Row>
-                  <Col md="auto" className="center-flex">
-                    <h1>Sarah Tao</h1>
-                  </Col>
-                </Row>
-                <Row className="justify-content-md-center">
-                  <Col md="auto" className="center-flex">
-                    <a href="https://www.linkedin.com/in/sarahtao/">
-                      <FontAwesomeIcon icon={faLinkedin} size="2x"/>
-                    </a>
-                  </Col>
-                  <Col md="auto" className="center-flex">
-                    <a href="https://github.com/s-tao">
-                      <FontAwesomeIcon icon={faGithubSquare} size="2x"/>
-                    </a>  
-                  </Col>
-                  <Col md="auto" className="center-flex">
-                    <FontAwesomeIcon icon={faBuffer} size="2x"/>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          </Container>
-        // </Fade>
-      ); 
+  return (
+    <Container>
+      <FlipContainer>
+        <Block>
+          <img src={profilePic} alt="Profile" style={imgStyle}/>
+        </Block>
+        <Block>
+          <h1>Sarah Tao</h1>
+        </Block>
+        <Block>
+          <a href="https://www.linkedin.com/in/sarahtao/">
+            <FontAwesomeIcon icon={faLinkedin} style={iconStyle} size="2x"/>
+          </a>
+          <a href="https://github.com/s-tao">
+            <FontAwesomeIcon icon={faGithubSquare} style={iconStyle} size="2x"/>
+          </a>
+          <FontAwesomeIcon icon={faBuffer} style={iconStyle} size="2x"/>
+        </Block>
+      </FlipContainer>
+    </Container>
+  ); 
 }
 
 export default Homepage;

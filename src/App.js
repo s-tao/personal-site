@@ -1,19 +1,32 @@
 import React, {useState} from 'react';
-// import { Container, Row, Col } from 'react-bootstrap'
-// import profilePic from './prof-pic.jpg' 
 
+import bkgrd from './clouds-bg.jpg'
+import { createGlobalStyle } from 'styled-components'
 import Homepage from './components/Homepage';
 import Profile from './components/Profile';
+
 import {useSpring, animated as a} from 'react-spring';
 import './App.css';
 
 
-function App() {
+const GlobalStyle = createGlobalStyle`
+  body, #root {
+    background-image: url(${bkgrd});
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    user-select: none;
+  }
+`;
 
+
+
+function App() {
   const [aboutMe, setAboutMe] = useState(false);
 
   const clickHandler = () => {
-    
     setAboutMe(!aboutMe)
   }
 
@@ -23,18 +36,19 @@ function App() {
     config: {mass: 5, tension: 500, friction: 80}
   })
 
-  // const AnimatedHomepage = animated(Homepage)
-  // const AnimatedProfile = animated(Profile)
   
   return (
-    <div onClick={clickHandler}>
-      <a.div className="c" style={{ opacity: opacity.interpolate(o => 1 - o), transform }}>
-        <Homepage/>
-      </a.div>
-      <a.div className="c" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }}>
-       <Profile/>
-      </a.div>
-    </div>
+    <>
+    <GlobalStyle/>
+      <div onClick={clickHandler}>
+        <a.div className="flip" style={{ opacity: opacity.interpolate(o => 1 - o), transform }}>
+          <Homepage/>
+        </a.div>
+        <a.div className="flip" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }}>
+        <Profile/>
+        </a.div>
+      </div>
+    </>
   )
 
 }
