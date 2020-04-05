@@ -1,27 +1,28 @@
 import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithubSquare, faBuffer } from '@fortawesome/free-brands-svg-icons';
-import { NavStyles } from '../NavStyles.js';
+import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { faParking } from '@fortawesome/free-solid-svg-icons';
+
+import { NavStyle, IconStyle } from '../NavStyles.js';
 
 
 const Nav = () => {
-  const iconStyle = {
-    margin: '8px 0',
-    color: '#ffffff',
-  };
 
   return (
-    <NavStyles>
+    <NavStyle>
       <a href="https://www.linkedin.com/in/sarahtao/">
-        <FontAwesomeIcon icon={faLinkedin} style={iconStyle} size="2x"/>
+      <IconStyle>
+        <FontAwesomeIcon icon={faLinkedin} size="2x"/>
+      </IconStyle>
       </a>
       <a href="https://github.com/s-tao">
-        <FontAwesomeIcon icon={faGithubSquare} style={iconStyle} size="2x"/>
+      <IconStyle>
+        <FontAwesomeIcon icon={faGithubSquare} size="2x"/>
+      </IconStyle>
       </a>
-
-       <FontAwesomeIcon icon={faBuffer} style={iconStyle} size="2x"/>
-    </NavStyles>
+      <IconStyle><FontAwesomeIcon icon={faParking} size="2x"/></IconStyle>
+    </NavStyle>
   );
 }
 
