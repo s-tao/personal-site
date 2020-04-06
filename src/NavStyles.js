@@ -6,18 +6,18 @@ export const NavStyle = styled.div`
   ${'' /* margin: 10px 0; */}
   text-align: center;
   height: 100vh;
-  background-color: #000000;
-  opacity: 60%;
+  ${'' /* background-color: #000000; */}
+  ${'' /* opacity: 60%; */}
   display: grid;
   align-content: center;
 `;
 
 export const IconStyle = styled.p`
-  margin: 12px 0;
-  color: #ffffff;
+  margin: 8px 0;
+  color: #46484A;
   transition: all .3s ease-in-out;
   :hover {
-    color: #bde0e5;
+    color: #ffffff;
     cursor: pointer;
     transition: all .3s ease-in-out;
     transform: scale(1.3);
