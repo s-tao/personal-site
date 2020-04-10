@@ -18,11 +18,9 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     height: 100vh;
     overflow: hidden;
-    user-select: none;
+    ${'' /* user-select: none; */}
   }
 `;
-
-// use state to check which link we're on, only show homepage if we're on homepage
 
 
 function App() {
@@ -33,10 +31,9 @@ function App() {
     <>
     <GlobalStyle/>
     <Nav/>
-    {/* <Homepage/> */}
     </>
     // </Router>
-  )
+  );
 
 }
 

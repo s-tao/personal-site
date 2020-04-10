@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 
-import profilePic from '../prof-pic.jpg'; 
-import { FlipContainer, Block, Container } from '../styled.js';
 import Profile from './Profile';
+import Intro from './Intro';
 import {useSpring, animated as a} from 'react-spring';
+import { Container } from '../styled.js';
 
 const Homepage = () => {
 
@@ -20,33 +20,10 @@ const Homepage = () => {
   })
 
 
-  // inline style created as dict (keys: values)
-  const imgStyle = {
-    height: '150px',
-    width: '150px',
-    borderRadius: '50%',
-    justifyContent: 'center'
-  };
-
-
   return (    
-    <Container>
+    <Container style={{alignItems: 'center', justifyContent: 'center'}}>
       <a.div className="flip" style={{ opacity: opacity.interpolate(o => 1 - o), transform }}>
-        <FlipContainer>
-          <Block>
-            <img src={profilePic} alt="Profile" style={imgStyle} />
-          </Block>
-          <Block>
-            <h1>Sarah Tao</h1>
-          </Block>
-          <Block>
-            <p style={{fontSize: '20px', margin: '0'}}><em>Software Engineer</em></p>
-          </Block>
-          <Block>
-            <p>satao.94@gmail.com</p>
-
-          </Block>
-        </FlipContainer>
+        <Intro/>
       </a.div>
 
       <a.div onClick={clickHandler} className="flip" style={{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }}>
