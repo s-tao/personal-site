@@ -32,7 +32,7 @@ const Nav = () => {
         </a>
         <Link to="/projects">
           <IconStyle>
-            <FontAwesomeIcon icon={faParking} size="2x" />
+            <FontAwesomeIcon icon={faParking} size="2x"/>
           </IconStyle>
         </Link>
       </NavStyle>

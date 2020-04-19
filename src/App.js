@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import bkgrd from './clouds-bg.jpg'
 import { createGlobalStyle } from 'styled-components'
-import Homepage from './components/Homepage';
 import Nav from './components/Nav';
 // import { Container } from './styled.js';
 // import { BrowserRouter as Router } from 'react-router-dom';

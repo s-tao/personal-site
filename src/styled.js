@@ -42,8 +42,17 @@ export const ProjectChild = styled.div`
   opacity: 95%;
   border-radius: 5px;
   padding: 10px;
-
+  ${'' /* box-shadow: 
+       inset 0 -2em 2em rgba(0,0,0,0.1), 
+             0 0  0 2px rgb(255,255,255),
+             0.2em 0.2em 1em rgba(0,0,0,0.3); */}
+  :hover {
+    cursor: pointer;
+    ${'' /* transition: all .3s ease-in-out;
+    transform: scale(1.02); */}
+  }
 `;
+
 
 export const ProjectContainer = styled.div`
   display: grid;
@@ -60,3 +69,12 @@ export const ProjectContainer = styled.div`
 
 `;
 
+export const ProjectDesc = styled.div`
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  opacity: 95%;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 45px 25%;
+`;
