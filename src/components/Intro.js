@@ -27,7 +27,6 @@ const Intro = () => {
           <p>satao.94@gmail.com</p>
         </Block>
       </FlipContainer>
-      
   );
 }
 

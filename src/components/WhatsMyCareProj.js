@@ -4,8 +4,6 @@ import { Container, ProjectDesc, ProjectContainer } from '../styled.js';
 
 const WhatsMyCare = () => {
 
-  
-
   return (
     <Container>
       <ProjectDesc>
