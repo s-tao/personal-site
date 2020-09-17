@@ -1,51 +1,57 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
-import { faParking, faHome } from '@fortawesome/free-solid-svg-icons';
-import { NavStyle, IconStyle } from '../NavStyles.js';
+import styled from 'styled-components';
+import { Navbar } from '../NavStyles.js';
 import { 
   BrowserRouter as Router, 
-  Link, 
+  NavLink, 
   Switch, 
   Route
 } from 'react-router-dom';
 import Projects from './Projects.js';
+import About from './About.js';
 import Homepage from './Homepage.js';
-import WhatsMyCare from './WhatsMyCareProj.js';
-import PortfolioWebsite from './PortfolioWebsite.js';
+
+// import WhatsMyCare from './WhatsMyCareProj.js';
+// import PortfolioWebsite from './PortfolioWebsite.js';
 
 const Nav = () => {
+  const NavStyle = styled(NavLink)`
+    padding: 0 15px;
+    text-decoration: none;
+    :hover {
+        color: #f7f7f7;
+    }
+  `;
   
   return (
     <Router>
-      <NavStyle>
-        <Link to="/">
-          <IconStyle>
-            <FontAwesomeIcon icon={faHome} size="2x" />
-          </IconStyle>
-        </Link>
-        <a href="https://www.linkedin.com/in/sarahtao/">
-          <IconStyle>
-            <FontAwesomeIcon icon={faLinkedin} size="2x"/>
-          </IconStyle>
-        </a>
-        <a href="https://github.com/s-tao">
-          <IconStyle>
-            <FontAwesomeIcon icon={faGithubSquare} size="2x"/>
-          </IconStyle>
-        </a>
-        <Link to="/projects">
-          <IconStyle>
-            <FontAwesomeIcon icon={faParking} size="2x"/>
-          </IconStyle>
-        </Link>
-      </NavStyle>
+      <Navbar>
+        <NavStyle exact to="/" 
+                 activeClassName="selected"
+                 activeStyle={{ fontWeight: "bold", 
+                                color: "#e17f0b" }}>
+          HOME
+        </NavStyle>  
+        <NavStyle to="/about" 
+                 activeClassName="selected"
+                 activeStyle={{ fontWeight: "bold", 
+                                color: "#e17f0b" }}>
+          ABOUT
+        </NavStyle> 
+        <NavStyle to="/projects" 
+                 activeClassName="selected"
+                 activeStyle={{ fontWeight: "bold", 
+                                color: "#e17f0b" }}>
+          PROJECTS
+        </NavStyle>   
+      </Navbar>
 
       <Switch>
         <Route exact path="/" component={Homepage} />
-        <Route path="/projects/portfolio-website" component={PortfolioWebsite} />
-        <Route path="/projects/whats-my-care" component={WhatsMyCare} />
+        <Route path="/about" component={About} />
         <Route path="/projects" component={Projects} />
+        {/* <Route path="/projects/portfolio-website" component={PortfolioWebsite} />
+        <Route path="/projects/whats-my-care" component={WhatsMyCare} /> */}
       </Switch>
     </Router>
   );
