@@ -1,30 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Navbar } from '../NavStyles.js';
-import { 
-  BrowserRouter as Router, 
-  NavLink, 
-  Switch, 
-  Route
-} from 'react-router-dom';
-import Projects from './Projects.js';
-import About from './About.js';
-import Homepage from './Homepage.js';
+import { Navbar } from './NavStyles.js';
+import { NavLink } from 'react-router-dom';
 
-// import WhatsMyCare from './WhatsMyCareProj.js';
-// import PortfolioWebsite from './PortfolioWebsite.js';
 
 const Nav = () => {
+  
+  const handleNavChange = () => {
+
+  }
+
   const NavStyle = styled(NavLink)`
     padding: 0 15px;
     text-decoration: none;
+    color: 'black';
     :hover {
         color: #f7f7f7;
     }
   `;
   
   return (
-    <Router>
       <Navbar>
         <NavStyle exact to="/" 
                  activeClassName="selected"
@@ -45,15 +40,6 @@ const Nav = () => {
           PROJECTS
         </NavStyle>   
       </Navbar>
-
-      <Switch>
-        <Route exact path="/" component={Homepage} />
-        <Route path="/about" component={About} />
-        <Route path="/projects" component={Projects} />
-        {/* <Route path="/projects/portfolio-website" component={PortfolioWebsite} />
-        <Route path="/projects/whats-my-care" component={WhatsMyCare} /> */}
-      </Switch>
-    </Router>
   );
 }
 

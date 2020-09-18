@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import Nav from '../Navbar';
 import { Page } from '../styled.js';
 
 const Homepage = () => {
@@ -7,7 +7,10 @@ const Homepage = () => {
 
 
   return (
-    <Page>Homepage progress</Page>
+    <Page>
+    <Nav/>
+      Homepage progress
+    </Page>
   )
 }
 
