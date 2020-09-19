@@ -1,45 +1,56 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Navbar } from './NavStyles.js';
-import { NavLink } from 'react-router-dom';
+import { NavContainer, 
+         Navbar, 
+         SocialMedia, 
+         IconStyle, 
+         LinkStyle } from './NavStyles.js';
+import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 
-
-const Nav = () => {
+const Nav = ({ textColor, hoverColor, activeColor }) => {
   
-  const handleNavChange = () => {
 
-  }
-
-  const NavStyle = styled(NavLink)`
-    padding: 0 15px;
-    text-decoration: none;
-    color: 'black';
-    :hover {
-        color: #f7f7f7;
-    }
-  `;
-  
   return (
+    <NavContainer>
       <Navbar>
-        <NavStyle exact to="/" 
-                 activeClassName="selected"
-                 activeStyle={{ fontWeight: "bold", 
-                                color: "#e17f0b" }}>
+        <LinkStyle exact to="/" 
+                   color={textColor}
+                   hover={hoverColor}
+                   activeClassName="selected"
+                   activeStyle={{ color: activeColor }}>
           HOME
-        </NavStyle>  
-        <NavStyle to="/about" 
-                 activeClassName="selected"
-                 activeStyle={{ fontWeight: "bold", 
-                                color: "#e17f0b" }}>
+        </LinkStyle>  
+        <LinkStyle to="/about" 
+                   color={textColor}
+                   hover={hoverColor}
+                   activeClassName="selected"
+                   activeStyle={{ color: activeColor }}>
           ABOUT
-        </NavStyle> 
-        <NavStyle to="/projects" 
-                 activeClassName="selected"
-                 activeStyle={{ fontWeight: "bold", 
-                                color: "#e17f0b" }}>
+        </LinkStyle> 
+        <LinkStyle to="/projects" 
+                   color={textColor}
+                   hover={hoverColor}
+                   activeClassName="selected"
+                   activeStyle={{ color: activeColor }}>
           PROJECTS
-        </NavStyle>   
-      </Navbar>
+        </LinkStyle> 
+        </Navbar>
+  
+        <SocialMedia>
+        <a href="https://www.linkedin.com/in/sarahtao/">
+            <IconStyle icon={faLinkedin} 
+                       size="2x"
+                       color={textColor}
+                       hover={hoverColor}
+                       />
+        </a>
+        <a href="https://github.com/s-tao">
+            <IconStyle icon={faGithubSquare} 
+                       color={textColor}
+                       hover={hoverColor}
+                       size="2x"/>
+        </a>
+        </SocialMedia>
+    </NavContainer>
   );
 }
 

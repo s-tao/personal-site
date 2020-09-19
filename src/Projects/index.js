@@ -8,7 +8,7 @@ const Projects = () => {
 
   return (
     <>
-      <Nav/>
+      <Nav textColor="#FFC300" hoverColor="#e17f0b" activeColor="#e17f0b"/>
       <Container>
         <ProjectContainer>
           <ProjectChild>
