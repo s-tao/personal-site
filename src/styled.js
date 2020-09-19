@@ -1,5 +1,15 @@
 import styled from 'styled-components';
 
+
+export const Page = styled.div`
+  background-color: #FFC300 ;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+`;
+
+
 export const Container = styled.div`
   ${'' /* justify-content: center; */}
   display: flex;
