@@ -9,37 +9,7 @@ const Projects = () => {
   return (
     <>
       <Nav textColor="#FFC300" hoverColor="#e17f0b" activeColor="#e17f0b"/>
-      <Container>
-        <ProjectContainer>
-          <ProjectChild>
-            <Link to="/projects/whats-my-care">
-              <h3>What's My Care</h3>
-              <p>
-                Full stack web-app that allows users to find health insurance plans
-              </p>
-              </Link>
-            <hr></hr>
-            <a href="https://github.com/s-tao/whats-my-care" 
-              className="alt-link">
-              GITHUB
-            </a>
-          </ProjectChild> 
-          <ProjectChild>
-            <Link to="/projects/portfolio-website">
-              <h3>Personal Website</h3>
-              <p>
-                Using React to create my own personal website showcasing all coding 
-                projects
-              </p>
-              </Link>
-            <hr></hr>
-            <a href="https://github.com/s-tao/personal-site"              
-              className="alt-link">
-              GITHUB
-            </a>
-          </ProjectChild> 
-        </ProjectContainer> 
-      </Container>
+      Add projects here
     </>
   );
 }
